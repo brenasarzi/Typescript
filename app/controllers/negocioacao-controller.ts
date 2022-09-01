@@ -15,7 +15,7 @@ export class NegociacaoController {
     adiciona(): void /* não retorna nada */{
         const negociacao = this.criaNegociacao()
         this.negociacoes.adiciona(negociacao)
-        this.negociacoes.lista().pop()
+        this.negociacoes.lista()
         console.log(this.negociacoes.lista())
         this.limparFormulario()
     }
