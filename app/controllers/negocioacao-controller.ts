@@ -6,7 +6,7 @@ import { NegociacoesView } from "../views/negociacoes-view.js"
 
 export class NegociacaoController {
     private inputData: HTMLInputElement
-    private inputQuantidade: HTMLInputElement 
+    private inputQuantidade: HTMLInputElement
     private inputValor: HTMLInputElement
     private negociacoes: Negociacoes = new Negociacoes()
     private negociacoesView = new NegociacoesView('#negociacoesView', true)
@@ -15,9 +15,9 @@ export class NegociacaoController {
     private readonly DOMINGO = 0
 
     constructor(){
-        this.inputData = document.querySelector('#data')
-        this.inputQuantidade = document.querySelector('#quantidade')
-        this.inputValor = document.querySelector('#valor')
+        this.inputData = document.querySelector('#data') as HTMLInputElement
+        this.inputQuantidade = document.querySelector('#quantidade') as HTMLInputElement
+        this.inputValor = document.querySelector('#valor') as HTMLInputElement
         this.negociacoesView.update(this.negociacoes)
     }
     public adiciona(): void /* não retorna nada */{
